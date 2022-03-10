@@ -28,12 +28,15 @@ span {
     border-radius: 21px;
     align-content: center;
     margin-left: 10px;
-    text-decoration: none;
-    list-style-type: none;
+    
 
 }
 
+span a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 
+}
 
 h2 {
     color: gray;
