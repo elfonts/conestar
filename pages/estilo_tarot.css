@@ -1,4 +1,4 @@
-/*Box Model*/ /*VOLVER A SUMER headerProductos al css*/
+/*Box Model*/
 * {
     margin: 0;
     padding: 0;
@@ -26,11 +26,14 @@ span {
     text-align: center;
     border-radius: 20px;
     align-content: center;
-    margin-left: 10px;
     
 }
 
-
+span:hover {
+    border-left: solid 5px rgb(0, 175, 175) ;
+    background-color: rgb(32, 158, 167);
+    color: honeydew;
+}
 
 h2 {
     color: gray;
@@ -46,13 +49,9 @@ h3 {
 
 }
 
-
-
-
 p {
     text-align: justify;
     margin: 5px;
-
 }
 
 footer {
@@ -73,72 +72,9 @@ footer {
     width: 200px;
 }
 
-
-
 #servicios {
 background-image: url(./img/back3.jpg);
-margin: 5px;
 }
-
-/*Transicion (cambiar article a section*/
-section img:hover {
-    filter: opacity(.5);
-}
-
-span:hover {
-    border-left: solid 5px rgb(0, 175, 175) ;
-    background-color: rgb(32, 158, 167);
-    color: honeydew;
-    
-    
-}
-
-/*Animación*/
-
-.animar {
-    animation-name: animacion;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-
-}
-
-.animar2 {
-    animation-name: animacion2;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-}
-
-@keyframes animacion {
-    0% { 
-        opacity: 0;
-        color: white;
-    
-    }
-    30% {
-        color: white;
-    }
-
-
-    100% {
-        opacity: 1;
-    }
-    
-}
-
-@keyframes animacion2 {
-    from { 
-        transform: translateX(-300px); 
-        color: white;
-    }
-    
-    to { 
-        transform: translateX(0);
-    }
-}
-
-
 
 /*Grid*/
 
@@ -167,7 +103,6 @@ span:hover {
 
 header {
     grid-area: cabeza;
-    
  }
  footer {
     grid-area: pie;
@@ -197,25 +132,28 @@ article p {
 }
 
 
- /*flex - gradiente */
-.flexMenu {
+ /*flex*/
+ .flexMenu {
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: center;
      
-}
+    }
 
 .flexHeader {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(white 50%, rgb(226, 226, 226) 90% ) ;
-
     
 }
 
+.flexProductos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*Tablet*/
@@ -280,7 +218,10 @@ article p {
              flex-direction: column;    
 
         }
-       
+        .flexProductos {
+            display: flex;
+            flex-direction: column;
+        }
         .flexHeader {
             padding: 5px;
         }
